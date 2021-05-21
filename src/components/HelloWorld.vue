@@ -1,18 +1,24 @@
 <template>
   <div class="hello">
-    <tinymce></tinymce>
+    <!-- <tinymce v-model="content" :disabled="false"></tinymce> -->
+
+    <Tree />
   </div>
+
 </template>
 
 <script>
-import tinymce from '../components/tinymce/index';
+// import tinymce from '../components/tinymce/index';
+import Tree from '../components/tree';
 export default {
   name: 'HelloWorld',
   components: {
-    tinymce
+    // tinymce,
+    Tree
   },
   data() {
     return {
+      content: 'oooo',
       model13: '',
       loading1: false,
       options1: [],
@@ -20,6 +26,12 @@ export default {
       loading2: false,
       options2: [],
       list: ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New hampshire', 'New jersey', 'New mexico', 'New york', 'North carolina', 'North dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode island', 'South carolina', 'South dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West virginia', 'Wisconsin', 'Wyoming']
+    }
+  },
+  watch: {
+    content() {
+      // alert('000');
+      
     }
   }
 }
